@@ -28,6 +28,7 @@ const Kennan = {
   id: 2, 
   email:  'kdiben1@tinypic.com',
   'first name': 'Kennan',
+  name:'Kennan',
   gender: 'M'
 }
 
@@ -77,12 +78,11 @@ console.log(antoniettaGender);
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
 // console.log(kennan.speak());
-let kennan ={
-    speak:function(){
-    console.log(`Hello my name is Kennan!`);
+Kennan.speak = function(){
+  return `Hello, my name is ${this['first name']}`
   }
-}
-console.log(kennan.speak());
+
+console.log(Kennan.speak());
 //tolu'sComment: Interesting to note that I kept on trying "let Kennan", forgetting that i have used the "const Kennan" already.
 
 
