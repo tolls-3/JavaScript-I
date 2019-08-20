@@ -5,20 +5,37 @@
 // };
 // myFunction();
 
+let myFunction = () => {
+    console.log("Function was invoked with arrow Syntax!");
+}
+myFunction();
 // let anotherFunction = function (param) {
-//   return param;
+// return param;
 // };
 // anotherFunction("Example");
+
+let anotherFunction = (param) =>{
+    return param;
+};
+anotherFunction("Example with arrow syntax");
 
 // let add = function (param1, param2) {
 //   return param1 + param2;
 // };
 // add(1,2);
 
+let add = (param1,param2)=>{
+    return param1 +param2;
+}
+add(1,2);
 // let subtract = function (param1, param2) {
 //   return param1 - param2;
 // };
 // subtract(1,2);
+let sub = (param1,param2)=>{
+    return param1 - param2;
+}
+sub(10,11);
 
 
 // Stretch
@@ -28,3 +45,9 @@
 //   return num * 3;
 // });
 // console.log(triple);
+
+exampleArray = [2,3,4,5];
+const triple = exampleArray.map( (num) =>{
+    return num*3;
+});
+console.log(triple);

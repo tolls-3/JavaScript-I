@@ -18,28 +18,83 @@ const example = {
 }
 
 // Write your intern objects here:
+const Mitzi = {
+  id: 1, 
+  email:  'mmelloy0@psu.edu',
+  'first name': 'Mitzi',
+  gender: 'F'
+}
+const Kennan = {
+  id: 2, 
+  email:  'kdiben1@tinypic.com',
+  'first name': 'Kennan',
+  name:'Kennan',
+  gender: 'M'
+}
 
+const Keven = {
+  id: 3, 
+  email:  'kmummery2@wikimedia.org',
+  'first name': 'Keven',
+  gender: 'M'
+}
+
+const Gannie = {
+  id: 4, 
+  email:  'gmartinson3@illinois.edu',
+  'first name': 'Gannie',
+  gender: 'M'
+}
+
+const Antonietta = {
+  id: 5, 
+  email:  'adaine5@samsung.com',
+  'first name': 'Antonietta',
+  gender: 'F'
+}
 
 // ==== Challenge 2: Reading Object Data ==== 
 // Once your objects are created, log out the following requests from HR into the console:
 
 // Mitzi's name
-
+let mitziName = Mitzi['first name'];
+console.log(mitziName);
 // Kennan's ID
+let kennanId = Kennan.id;
+console.log(kennanId);
 
 // Keven's email
+let kevenEmail = Keven.email;
+console.log(kevenEmail);
 
 // Gannie's name
+let gannieName = Gannie['first name'];
+console.log(gannieName);
 
 // Antonietta's Gender
+let antoniettaGender = Antonietta.gender;
+console.log(antoniettaGender);
 
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
 // console.log(kennan.speak());
+Kennan.speak = function(){
+  return `Hello, my name is ${this['first name']}`
+  }
+
+console.log(Kennan.speak());
+//tolu'sComment: Interesting to note that I kept on trying "let Kennan", forgetting that i have used the "const Kennan" already.
+
 
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
 //console.log(antonietta.multiplyNums(3,4));
-
+let antonietta = {
+  multiplyNums: function(p1, p2){
+    const multiply= p1 * p2;
+    return multiply;
+  }
+}
+console.log(antonietta.multiplyNums(3,4));
 // === Great work! === Head over to the the arrays.js. You may come back and attempt the Stretch Challenge once you have completed the challenges in arrays.js and function-conversion.js.
 
 // ==== Stretch Challenge: Nested Objects and the this keyword ==== 
